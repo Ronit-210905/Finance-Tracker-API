@@ -1,0 +1,317 @@
+{
+	"info": {
+		"_postman_id": "38957304-a943-4e25-83bf-76c2c263c32e",
+		"name": "Finance Tracker API",
+		"description": "A backend project for service learning to make a finance tracker api and test it using postman.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46318026",
+		"_collection_link": "https://ronit-5839394.postman.co/workspace/Ronit's-Workspace~3a16afd1-4097-4b60-8c6d-8232799a1749/collection/46318026-38957304-a943-4e25-83bf-76c2c263c32e?action=share&source=collection_link&creator=46318026"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/api/auth/register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"ronit\",\r\n  \"email\": \"ronit@example.com\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/auth/login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODYyY2Q4ODIwOTNkZmMxNzQ1NWNiMDkiLCJpYXQiOjE3NTEzMDU2NTN9.1hlUBIFtHZrwqMrPRZsg1yX1HVIYxxB1Qpz2yAmPdAs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"ronit@example.com\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/transactions",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODYyY2Q4ODIwOTNkZmMxNzQ1NWNiMDkiLCJpYXQiOjE3NTEzMDU2NTN9.1hlUBIFtHZrwqMrPRZsg1yX1HVIYxxB1Qpz2yAmPdAs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"date\": \"2025-06-30\",\r\n  \"description\": \"Groceries\",\r\n  \"amount\": 1000,\r\n  \"category\": \"Food\",\r\n  \"type\": \"Expense\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/transactions",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODYyY2Q4ODIwOTNkZmMxNzQ1NWNiMDkiLCJpYXQiOjE3NTEzMDU2NTN9.1hlUBIFtHZrwqMrPRZsg1yX1HVIYxxB1Qpz2yAmPdAs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/analytics/category-summary?month=6&year=2025",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODYyY2Q4ODIwOTNkZmMxNzQ1NWNiMDkiLCJpYXQiOjE3NTEzMDU2NTN9.1hlUBIFtHZrwqMrPRZsg1yX1HVIYxxB1Qpz2yAmPdAs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"description\": \"Supermarket\",\r\n  \"amount\": 1100\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/analytics/category-summary?month=6&year=2025",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"analytics",
+						"category-summary"
+					],
+					"query": [
+						{
+							"key": "month",
+							"value": "6"
+						},
+						{
+							"key": "year",
+							"value": "2025"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/transactions/6862d22a2093dfc17455cb14?",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODYyY2Q4ODIwOTNkZmMxNzQ1NWNiMDkiLCJpYXQiOjE3NTEzMDU2NTN9.1hlUBIFtHZrwqMrPRZsg1yX1HVIYxxB1Qpz2yAmPdAs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"description\": \"Supermarket\",\r\n  \"amount\": 1100\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/transactions/6862d22a2093dfc17455cb14?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"transactions",
+						"6862d22a2093dfc17455cb14"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/summary?month=6&year=2025",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODYyY2Q4ODIwOTNkZmMxNzQ1NWNiMDkiLCJpYXQiOjE3NTEzMDU2NTN9.1hlUBIFtHZrwqMrPRZsg1yX1HVIYxxB1Qpz2yAmPdAs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/summary?month=6&year=2025",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"summary"
+					],
+					"query": [
+						{
+							"key": "month",
+							"value": "6"
+						},
+						{
+							"key": "year",
+							"value": "2025"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/transactions/6862d22a2093dfc17455cb14",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODYyY2Q4ODIwOTNkZmMxNzQ1NWNiMDkiLCJpYXQiOjE3NTEzMDU2NTN9.1hlUBIFtHZrwqMrPRZsg1yX1HVIYxxB1Qpz2yAmPdAs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/transactions/6862d22a2093dfc17455cb14",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"transactions",
+						"6862d22a2093dfc17455cb14"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
