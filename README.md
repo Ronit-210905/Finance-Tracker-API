@@ -1,1 +1,1 @@
-maine finally bana liya project 
+A simple web application for task management.
